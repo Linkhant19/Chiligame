@@ -69,3 +69,15 @@ document.getElementById('button3').addEventListener('click', function() {
 document.getElementById('button4').addEventListener('click', function() {
     document.getElementById('displayArea').innerText = getRandomQuestion(list4);
 });
+
+document.addEventListener('mousemove', function(e) {
+    let trail = document.createElement('div');
+    trail.className = 'trail';
+    document.body.appendChild(trail);
+    trail.style.left = `${e.pageX}px`;
+    trail.style.top = `${e.pageY}px`;
+
+    setTimeout(() => {
+        document.body.removeChild(trail);
+    }, 300); 
+});

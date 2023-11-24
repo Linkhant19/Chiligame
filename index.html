@@ -6,9 +6,13 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
-            background-color: #e0e0e0;
+            background: linear-gradient(to right, #f9f9f9, #bfe9ff); 
             padding: 20px;
             color: #333;
+        }
+    
+        h1 {
+            text-shadow: 2px 2px #f8f8f8; 
         }
     
         button {
@@ -21,10 +25,12 @@
             border: none;
             border-radius: 5px;
             box-shadow: 0 4px #999;
+            transition: all 0.3s ease; 
         }
     
         button:hover {
             background-color: #45a049;
+            transform: scale(1.05); 
         }
     
         button:active {
@@ -32,17 +38,50 @@
             box-shadow: 0 2px #666;
             transform: translateY(2px);
         }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
     
-    </style>    
+        #displayArea {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+
+        .trail { 
+            position: absolute;
+            height: 150px; 
+            width: 150px;
+            border-radius: 30%;
+            background: rgb(255, 112, 226); 
+            opacity: 0.6;
+            z-index: -1; 
+        }
+
+
+    </style>
+       
 </head>
 <body>
-    <h1>Random Question Generator</h1>
-    <button id="button1">Mild</button>
-    <button id="button2">Spicy</button>
-    <button id="button3">Not Too sfw</button>
-    <button id="button4">Dare</button>
-    <p id="displayArea">Click a button to start.</p>
+    <div class="content-wrapper">
+        <h1>Random Question Generator</h1>
+        <button id="button1">Mild</button>
+        <button id="button2">Spicy</button>
+        <button id="button3">Not Too sfw</button>
+        <button id="button4">Dare</button>
+        <p id="displayArea">Click a button to start.</p>
+    </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
