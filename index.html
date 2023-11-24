@@ -4,25 +4,36 @@
     <title>Random Question Generator</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
-            background-color: #f0f0f0;
+            background-color: #e0e0e0;
             padding: 20px;
+            color: #333;
         }
-
+    
         button {
             margin: 10px;
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
+            background-color: rgb(247, 35, 28);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px #999;
         }
-
-        #displayArea {
-            margin-top: 20px;
-            font-size: 20px;
-            color: blue;
+    
+        button:hover {
+            background-color: #45a049;
         }
-    </style>
+    
+        button:active {
+            background-color: #45a049;
+            box-shadow: 0 2px #666;
+            transform: translateY(2px);
+        }
+    
+    </style>    
 </head>
 <body>
     <h1>Random Question Generator</h1>
@@ -32,33 +43,6 @@
     <button id="button4">Dare</button>
     <p id="displayArea">Click a button to start.</p>
 
-    <script>
-        
-        const list1 = ["Question 1A", "Question 1B", "Question 1C"];
-        const list2 = ["Question 2A", "Question 2B", "Question 2C"];
-        const list3 = ["Question 3A", "Question 3B", "Question 3C"];
-        const list4 = ["Question 3A", "Question 3B", "Question 3C"];
-
-        function getRandomQuestion(list) {
-            return list[Math.floor(Math.random() * list.length)];
-        }
-
-        document.getElementById('button1').addEventListener('click', function() {
-            document.getElementById('displayArea').innerText = getRandomQuestion(list1);
-        });
-
-        document.getElementById('button2').addEventListener('click', function() {
-            document.getElementById('displayArea').innerText = getRandomQuestion(list2);
-        });
-
-        document.getElementById('button3').addEventListener('click', function() {
-            document.getElementById('displayArea').innerText = getRandomQuestion(list3);
-        });
-
-        document.getElementById('button4').addEventListener('click', function() {
-            document.getElementById('displayArea').innerText = getRandomQuestion(list4);
-        });
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
