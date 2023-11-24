@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Question Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #displayArea {
+            margin-top: 20px;
+            font-size: 20px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Question Generator</h1>
+    <button id="button1">Mild</button>
+    <button id="button2">Spicy</button>
+    <button id="button3">Not Too sfw</button>
+    <button id="button4">Dare</button>
+    <p id="displayArea">Click a button to start.</p>
+
+    <script>
+        
+        const list1 = ["Question 1A", "Question 1B", "Question 1C"];
+        const list2 = ["Question 2A", "Question 2B", "Question 2C"];
+        const list3 = ["Question 3A", "Question 3B", "Question 3C"];
+        const list4 = ["Question 3A", "Question 3B", "Question 3C"];
+
+        function getRandomQuestion(list) {
+            return list[Math.floor(Math.random() * list.length)];
+        }
+
+        document.getElementById('button1').addEventListener('click', function() {
+            document.getElementById('displayArea').innerText = getRandomQuestion(list1);
+        });
+
+        document.getElementById('button2').addEventListener('click', function() {
+            document.getElementById('displayArea').innerText = getRandomQuestion(list2);
+        });
+
+        document.getElementById('button3').addEventListener('click', function() {
+            document.getElementById('displayArea').innerText = getRandomQuestion(list3);
+        });
+
+        document.getElementById('button4').addEventListener('click', function() {
+            document.getElementById('displayArea').innerText = getRandomQuestion(list4);
+        });
+
+    </script>
+</body>
+</html>
